@@ -1,5 +1,13 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { generateSEO } from "@/lib/seo";
+
+export const metadata = generateSEO({
+  title: "Analytics Dashboard",
+  description: "Monitor the TON network in real-time with comprehensive analytics, transaction insights, network health metrics, and blockchain data visualization.",
+  keywords: ["TON Analytics", "Blockchain Data", "Network Monitoring", "TON Statistics", "Real-time Metrics"],
+  path: "/analytics",
+});
 
 export default function Analytics() {
   return (

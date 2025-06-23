@@ -1,6 +1,14 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { generateSEO } from "@/lib/seo";
+
+export const metadata = generateSEO({
+  title: "AI Smart Assistant",
+  description: "Get intelligent, context-aware assistance for all your TON ecosystem needs. Natural language interaction with personalized recommendations for TON blockchain operations.",
+  keywords: ["TON AI", "Blockchain Assistant", "AI Helper", "TON Queries", "Smart Assistant"],
+  path: "/ai",
+});
 
 export default function AIAssistant() {
   return (

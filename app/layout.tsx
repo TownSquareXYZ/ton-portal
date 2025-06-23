@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { defaultSEO } from "@/lib/seo";
+import { StructuredData, organizationSchema, websiteSchema } from "@/components/structured-data";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,10 +14,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "TON Portal - Intelligent TON Ecosystem Gateway",
-  description: "Your unified entry point to the TON ecosystem. AI-powered assistance, real-time analytics, essential tools, and community resources all in one place.",
-};
+export const metadata: Metadata = defaultSEO;
 
 export default function RootLayout({
   children,
@@ -24,6 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <StructuredData data={organizationSchema} />
+        <StructuredData data={websiteSchema} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -1,5 +1,13 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { generateSEO } from "@/lib/seo";
+
+export const metadata = generateSEO({
+  title: "Events Calendar",
+  description: "Stay updated with the latest TON ecosystem events, conferences, hackathons, AMAs, and community gatherings happening worldwide.",
+  keywords: ["TON Events", "Blockchain Conferences", "Hackathons", "TON Community", "Developer Events"],
+  path: "/events",
+});
 
 export default function Events() {
   return (

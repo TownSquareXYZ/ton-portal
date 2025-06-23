@@ -1,5 +1,13 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { generateSEO } from "@/lib/seo";
+
+export const metadata = generateSEO({
+  title: "Resource Hub",
+  description: "Comprehensive TON development resources including documentation, tutorials, SDK guides, and learning paths for developers at all skill levels.",
+  keywords: ["TON Resources", "Developer Documentation", "Tutorials", "SDK", "Learning Paths", "TON Community"],
+  path: "/resources",
+});
 
 export default function Resources() {
   return (

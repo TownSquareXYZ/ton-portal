@@ -1,5 +1,13 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
+import { generateSEO } from "@/lib/seo";
+
+export const metadata = generateSEO({
+  title: "Tools Suite",
+  description: "Essential blockchain utilities for the TON ecosystem. Access TON faucet, staking services, token swap, DeFi lending, and developer tools all in one place.",
+  keywords: ["TON Tools", "Blockchain Utilities", "TON Faucet", "Staking", "Token Swap", "DeFi Tools"],
+  path: "/tools",
+});
 
 export default function Tools() {
   return (
