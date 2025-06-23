@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function AIAssistant() {
   return (
@@ -8,25 +9,25 @@ export default function AIAssistant() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">T</span>
               </div>
               <span className="text-xl font-bold text-gray-900 dark:text-white">TON Portal</span>
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/ai" className="text-blue-600 dark:text-blue-400 font-semibold">
+              <Link href="/ai" className="text-primary font-semibold">
                 AI Assistant
               </Link>
-              <Link href="/analytics" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <Link href="/analytics" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
                 Analytics
               </Link>
-              <Link href="/tools" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <Link href="/tools" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
                 Tools
               </Link>
-              <Link href="/events" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <Link href="/events" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
                 Events
               </Link>
-              <Link href="/resources" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <Link href="/resources" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
                 Resources
               </Link>
             </div>
@@ -36,8 +37,8 @@ export default function AIAssistant() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mx-auto mb-6">
-            <span className="text-blue-600 dark:text-blue-400 text-4xl">🤖</span>
+          <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <span className="text-primary text-4xl">🤖</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">AI Smart Assistant</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -48,12 +49,12 @@ export default function AIAssistant() {
 
         {/* Chat Interface Placeholder */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700">
-            <div className="p-6 border-b border-gray-200 dark:border-gray-700">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">TON AI Assistant</h2>
-              <p className="text-sm text-gray-600 dark:text-gray-400">Coming soon - AI-powered TON ecosystem guidance</p>
-            </div>
-            <div className="p-8 min-h-[400px] flex items-center justify-center">
+          <Card className="shadow-xl">
+            <CardHeader className="border-b">
+              <CardTitle>TON AI Assistant</CardTitle>
+              <CardDescription>Coming soon - AI-powered TON ecosystem guidance</CardDescription>
+            </CardHeader>
+            <CardContent className="p-8 min-h-[400px] flex items-center justify-center">
               <div className="text-center">
                 <div className="w-20 h-20 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-gray-400 dark:text-gray-500 text-3xl">💬</span>
@@ -75,23 +76,34 @@ export default function AIAssistant() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
+            </CardContent>
+          </Card>
           {/* Features Grid */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Natural Language Queries</h3>
-              <p className="text-gray-600 dark:text-gray-400">Ask questions in plain English and get comprehensive answers about the TON ecosystem.</p>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Personalized Recommendations</h3>
-              <p className="text-gray-600 dark:text-gray-400">Get tailored suggestions based on your interests and activity in the TON network.</p>
-            </div>
-            <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Real-time Information</h3>
-              <p className="text-gray-600 dark:text-gray-400">Access up-to-date information about network status, prices, and opportunities.</p>
-            </div>
+            <Card>
+              <CardHeader>
+                <CardTitle>Natural Language Queries</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>Ask questions in plain English and get comprehensive answers about the TON ecosystem.</CardDescription>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Personalized Recommendations</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>Get tailored suggestions based on your interests and activity in the TON network.</CardDescription>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Real-time Information</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>Access up-to-date information about network status, prices, and opportunities.</CardDescription>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </main>

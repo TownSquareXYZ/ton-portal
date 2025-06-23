@@ -2,31 +2,31 @@ import Link from "next/link";
 
 export default function Tools() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100 dark:from-gray-900 dark:to-purple-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-blue-900">
       {/* Navigation */}
       <nav className="border-b border-gray-200 dark:border-gray-700 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">T</span>
               </div>
               <span className="text-xl font-bold text-gray-900 dark:text-white">TON Portal</span>
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/ai" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <Link href="/ai" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
                 AI Assistant
               </Link>
-              <Link href="/analytics" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <Link href="/analytics" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
                 Analytics
               </Link>
-              <Link href="/tools" className="text-purple-600 dark:text-purple-400 font-semibold">
+              <Link href="/tools" className="text-primary font-semibold">
                 Tools
               </Link>
-              <Link href="/events" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <Link href="/events" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
                 Events
               </Link>
-              <Link href="/resources" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+              <Link href="/resources" className="text-gray-700 dark:text-gray-300 hover:text-primary transition-colors">
                 Resources
               </Link>
             </div>
@@ -36,8 +36,8 @@ export default function Tools() {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
-          <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mx-auto mb-6">
-            <span className="text-purple-600 dark:text-purple-400 text-4xl">🛠️</span>
+          <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+            <span className="text-primary text-4xl">🛠️</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Tools Suite</h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
