@@ -38,9 +38,12 @@ Centralized TON development resources with documentation, API references, tutori
 ## Tech Stack
 
 - **Frontend**: Next.js 15 + React 19 + TypeScript
-- **Styling**: Tailwind CSS + Framer Motion animations
-- **UI Components**: Radix UI primitives + Lucide icons
-- **Charts**: Recharts for data visualization
+- **Styling**: Tailwind CSS v4 with TON official branding (#0098EA)
+- **UI Components**: shadcn/ui (Radix UI primitives) + Lucide icons
+- **SEO**: Comprehensive metadata, sitemap, structured data
+- **Package Manager**: pnpm with clean dependency management
+- **Charts**: Recharts for data visualization (planned)
+- **Animations**: Framer Motion (planned)
 - **Planned Integrations**: OpenAI API, TON SDK, Discord/Telegram APIs
 
 ## Getting Started
@@ -71,13 +74,33 @@ pnpm lint        # Run ESLint
 
 ```
 app/
-├── globals.css          # Global styles with Tailwind CSS
-├── layout.tsx          # Root layout component
-└── page.tsx            # Landing page component
+├── ai/                 # AI Assistant page
+├── analytics/          # Analytics Dashboard page
+├── events/             # Events Calendar page
+├── resources/          # Resource Hub page
+├── tools/              # Tools Suite page
+├── globals.css         # Global styles with TON branding
+├── layout.tsx          # Root layout with SEO
+├── page.tsx            # Landing page
+├── robots.ts           # SEO robots.txt generation
+└── sitemap.ts          # SEO sitemap generation
 
-public/                 # Static assets
-├── next.svg           # Next.js logo
-└── *.svg              # Other UI icons
+components/             # Reusable UI components
+├── ui/                 # shadcn/ui components
+│   ├── badge.tsx       # Badge component
+│   ├── button.tsx      # Button variants
+│   ├── card.tsx        # Card components
+│   └── input.tsx       # Input field
+├── navbar.tsx          # Unified navigation
+├── footer.tsx          # Unified footer
+└── structured-data.tsx # SEO schemas
+
+lib/                    # Utility libraries
+├── seo.ts             # SEO metadata generation
+└── utils.ts           # General utilities
+
+public/                # Static assets
+└── *.svg             # Icon assets
 ```
 
 ## Target Users
@@ -93,29 +116,37 @@ This is an MVP implementation with basic Next.js 15 scaffolding completed:
 
 ### ✅ Phase 1 - Foundation (Completed)
 - Next.js 15 + React 19 + TypeScript setup
-- Tailwind CSS v4 configuration
+- Tailwind CSS v4 configuration with TON branding
 - Basic app structure with App Router
 - ESLint configuration
 
-### 🚧 Phase 2 - Core Features (Planned)
+### ✅ Phase 2 - Core Features (Completed)
 - Landing page with hero section
-- Navigation system with mobile support
+- Unified navigation and footer components
 - Feature pages (`/ai`, `/analytics`, `/tools`, `/events`, `/resources`)
-- UI component library (Radix UI + Lucide icons)
-- Framer Motion animations
+- shadcn/ui component library integration
+- TON official color scheme (#0098EA)
+- Comprehensive SEO optimization
+- Sitemap and robots.txt generation
+- Structured data for enhanced search results
+- Mobile-responsive design
 
-### 📋 Phase 3 - Integrations (Future)
+### 🚧 Phase 3 - Integrations (Planned)
 - AI assistant functionality (OpenAI API)
 - Real-time TON network data feeds
 - Working blockchain tools (TON SDK)
 - Events calendar with live data
 - Resource content management
+- Framer Motion animations
 
 ## Key Development Notes
 
-- Uses pnpm as package manager
+- Uses pnpm as package manager with clean dependency management
 - Configured with Turbopack for faster development
-- Tailwind CSS v4 with PostCSS
+- Tailwind CSS v4 with PostCSS and TON official branding
+- shadcn/ui for consistent, accessible components
 - TypeScript strict mode enabled
 - App Router architecture (not Pages Router)
 - Responsive design with mobile-first approach
+- Comprehensive SEO with metadata, sitemap, and structured data
+- Domain: https://tonportal.xyz
