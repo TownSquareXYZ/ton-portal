@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { TonConnectButton } from '@tonconnect/ui-react';
 
 export function Navbar() {
   const pathname = usePathname();
@@ -76,6 +77,16 @@ export function Navbar() {
             >
               Resources
             </Link>
+            
+            {/* TON Connect Wallet Button */}
+            <div className="ml-4">
+              <TonConnectButton />
+            </div>
+          </div>
+
+          {/* Mobile menu - add wallet button here too */}
+          <div className="md:hidden flex items-center space-x-4">
+            <TonConnectButton />
           </div>
         </div>
       </div>
